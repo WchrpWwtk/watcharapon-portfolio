@@ -30,7 +30,11 @@ export function Navbar() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href={profile.links.github} target="_blank">
+          <Link
+            href={profile.links.github}
+            target="_blank"
+            aria-label="Visit GitHub profile"
+          >
             <Button variant="ghost" size="icon" aria-label="GitHub Profile">
               <SiGithub className="h-4 w-4" />
             </Button>
@@ -38,7 +42,7 @@ export function Navbar() {
           <Link
             href={profile.links.linkedin}
             target="_blank"
-            aria-label="Visit GitHub profile"
+            aria-label="Visit LinkedIn profile"
           >
             <Button variant="ghost" size="icon">
               <AiOutlineLinkedin
@@ -47,11 +51,7 @@ export function Navbar() {
               />
             </Button>
           </Link>
-          <Link
-            href={profile.links.resume}
-            target="_blank"
-            aria-label="Visit LinkedIn profile"
-          >
+          <Link href={profile.links.resume} target="_blank">
             <Button className="hidden rounded-xl sm:inline-flex">Resume</Button>
           </Link>
         </div>
