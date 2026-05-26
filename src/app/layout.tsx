@@ -6,9 +6,16 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://watcharapon-portfolio.vercel.app"),
   title: "Watcharapon Wangwuttikorn | Full Stack Developer",
   description:
     "Full Stack Developer specializing in business systems, internal tools, backend APIs, and practical web applications.",
+  authors: [
+    {
+      name: "Watcharapon Wangwuttikorn",
+    },
+  ],
+  creator: "Watcharapon Wangwuttikorn",
   keywords: [
     "Full Stack Developer",
     "React Developer",
@@ -24,6 +31,8 @@ export const metadata: Metadata = {
     description:
       "Full Stack Developer specializing in business systems and practical software.",
     type: "website",
+    url: "https://watcharapon-portfolio.vercel.app",
+    siteName: "Watcharapon Portfolio",
   },
 };
 
