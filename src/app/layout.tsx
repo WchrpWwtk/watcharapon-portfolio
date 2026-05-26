@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: "Watcharapon Wangwuttikorn | Full Stack Developer",
   description:
     "Full Stack Developer specializing in business systems, internal tools, backend APIs, and practical web applications.",
+  keywords: [
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Django Developer",
+    "FastAPI",
+    "PostgreSQL",
+    "Thailand Developer",
+    "Bangkok Developer",
+  ],
   openGraph: {
     title: "Watcharapon Wangwuttikorn",
     description:
