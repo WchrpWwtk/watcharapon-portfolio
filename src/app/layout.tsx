@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://watcharapon-portfolio.vercel.app",
     siteName: "Watcharapon Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Watcharapon Wangwuttikorn Full Stack Developer portfolio",
+      },
+    ],
   },
 };
 
