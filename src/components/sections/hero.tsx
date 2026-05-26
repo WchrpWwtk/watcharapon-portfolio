@@ -1,7 +1,5 @@
-import { ArrowRight, Download, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { profile } from "@/data/profile";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function Hero() {
@@ -10,7 +8,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.18),transparent_35%),radial-gradient(circle_at_70%_20%,rgba(139,92,246,0.16),transparent_30%)]" />
       <div className="relative mx-auto max-w-7xl">
         <div className="max-w-5xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200">
             <MapPin className="h-4 w-4 text-sky-400" />
             {profile.role.en} · {profile.location.en}
           </div>
@@ -20,7 +18,7 @@ export function Hero() {
           <h1 className="mt-5 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
             {profile.headline.en}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
             {profile.summary.en}
           </p>
           <div className="mt-6 flex flex-wrap gap-2">

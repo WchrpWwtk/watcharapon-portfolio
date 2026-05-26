@@ -42,7 +42,7 @@ export function Projects() {
                     <h3 className="text-3xl font-bold tracking-tight">
                       {project.title}
                     </h3>
-                    <p className="mt-4 leading-7 text-slate-300">
+                    <p className="mt-4 leading-7 text-slate-200">
                       {project.description}
                     </p>
                   </div>
@@ -53,7 +53,7 @@ export function Projects() {
                       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
                         Problem
                       </p>
-                      <p className="mt-3 leading-7 text-slate-300">
+                      <p className="mt-3 leading-7 text-slate-200">
                         {project.problem}
                       </p>
                     </div>
@@ -61,7 +61,7 @@ export function Projects() {
                       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">
                         Solution
                       </p>
-                      <p className="mt-3 leading-7 text-slate-300">
+                      <p className="mt-3 leading-7 text-slate-200">
                         {project.solution}
                       </p>
                     </div>
@@ -69,7 +69,7 @@ export function Projects() {
                       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-300">
                         Highlights
                       </p>
-                      <ul className="mt-3 space-y-2 text-slate-300">
+                      <ul className="mt-3 space-y-2 text-slate-200">
                         {project.highlights.map((item) => (
                           <li key={item} className="flex gap-3">
                             <span className="mt-2 h-1.5 w-1.5 rounded-full bg-sky-300" />

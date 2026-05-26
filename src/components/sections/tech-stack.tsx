@@ -15,7 +15,7 @@ export function TechStack() {
         <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
           Tools I use to build practical full-stack systems
         </h2>
-        <p className="mt-4 text-lg leading-8 text-slate-300">
+        <p className="mt-4 text-lg leading-8 text-slate-200">
           A focused stack for frontend interfaces, backend APIs, database-driven
           systems, deployment workflows, and AI-assisted development.
         </p>
