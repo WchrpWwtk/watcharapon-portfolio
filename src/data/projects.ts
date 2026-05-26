@@ -21,6 +21,7 @@ export const projects = [
       "Docker",
       "GitHub",
     ],
+    screenshot: "/projects/incident-board-dashboard.png",
     githubUrl: "https://github.com/WchrpWwtk/incident_board",
     demoUrl: "https://incident-board.onrender.com/",
   },
