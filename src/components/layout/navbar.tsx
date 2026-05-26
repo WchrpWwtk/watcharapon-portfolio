@@ -5,9 +5,15 @@ import { Menu } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { profile } from "@/data/profile";
 import { AiOutlineLinkedin } from "react-icons/ai";
+import { useState } from "react";
 
 const navItems = [
   {
@@ -29,6 +35,23 @@ const navItems = [
 ];
 
 export function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const handleSectionClick = (href: string) => {
+    const target = document.querySelector(href);
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    window.setTimeout(() => {
+      setOpen(false);
+    }, 100);
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -78,7 +101,7 @@ export function Navbar() {
         </div>
 
         <div className="md:hidden">
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button
                 variant="ghost"
@@ -105,41 +128,48 @@ export function Navbar() {
                 </div>
                 <nav className="flex flex-1 flex-col gap-1 px-4 py-6">
                   {navItems.map((item) => (
-                    <Link
+                    <button
                       key={item.href}
-                      href={item.href}
-                      className="rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition hover:bg-white/10 hover:text-white"
+                      type="button"
+                      onClick={() => handleSectionClick(item.href)}
+                      className="rounded-xl px-4 py-3 text-left text-base font-medium text-slate-200 transition hover:bg-white/10 hover:text-white"
                     >
                       {item.label}
-                    </Link>
+                    </button>
                   ))}
                 </nav>
                 <div className="border-t border-white/10 px-4 py-5">
                   <div className="grid gap-2">
-                    <Link
-                      href={profile.links.resume}
-                      target="_blank"
-                      className="rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
-                    >
-                      Download Resume
-                    </Link>
+                    <SheetClose asChild>
+                      <Link
+                        href={profile.links.resume}
+                        target="_blank"
+                        className="rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
+                      >
+                        Download Resume
+                      </Link>
+                    </SheetClose>
                     <div className="grid grid-cols-2 gap-2">
-                      <Link
-                        href={profile.links.github}
-                        target="_blank"
-                        className="flex items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10 hover:text-white"
-                      >
-                        <SiGithub className="h-4 w-4" />
-                        GitHub
-                      </Link>
-                      <Link
-                        href={profile.links.linkedin}
-                        target="_blank"
-                        className="flex items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10 hover:text-white"
-                      >
-                        <AiOutlineLinkedin className="h-4 w-4" />
-                        LinkedIn
-                      </Link>
+                      <SheetClose asChild>
+                        <Link
+                          href={profile.links.github}
+                          target="_blank"
+                          className="flex items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10 hover:text-white"
+                        >
+                          <SiGithub className="h-4 w-4" />
+                          GitHub
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link
+                          href={profile.links.linkedin}
+                          target="_blank"
+                          className="flex items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10 hover:text-white"
+                        >
+                          <AiOutlineLinkedin className="h-4 w-4" />
+                          LinkedIn
+                        </Link>
+                      </SheetClose>
                     </div>
                   </div>
                 </div>
