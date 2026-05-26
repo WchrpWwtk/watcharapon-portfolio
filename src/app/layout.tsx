@@ -42,6 +42,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: {
+    canonical: "https://watcharapon-portfolio.vercel.app",
+  },
 };
 
 export default function RootLayout({
