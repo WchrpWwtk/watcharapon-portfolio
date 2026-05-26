@@ -10,12 +10,12 @@ export const profile = {
     th: "กรุงเทพฯ ประเทศไทย",
   },
   headline: {
-    en: "Building business systems that teams actually use.",
-    th: "สร้างระบบธุรกิจที่ทีมใช้งานได้จริง",
+    en: "Full Stack Developer building practical business systems and internal tools.",
+    th: "Full Stack Developer ที่สร้างระบบธุรกิจและ internal tools ที่ใช้งานได้จริง",
   },
   summary: {
-    en: "Full Stack Developer focused on internal tools, operational workflows, backend APIs, and practical web applications.",
-    th: "Full Stack Developer ที่เน้นสร้าง internal tools, workflow สำหรับงานจริง, backend API และเว็ปแอปที่ใช้งานได้จริง",
+    en: "I build web applications, backend APIs, dashboards, and internal tools that help teams improve real business workflows.",
+    th: "สร้างเว็บแอป backend API dashboard และ internal tools ที่ช่วยให้ทีมทำงานจริงได้ดีขึ้น",
   },
   links: {
     github: "https://github.com/WchrpWwtk",
@@ -24,4 +24,12 @@ export const profile = {
     email: "mailto:wchrp.wwtk@gmail.com",
     resume: "/resume.pdf",
   },
+  featuredSkills: [
+    "React",
+    "Next.js",
+    "Django",
+    "FastAPI",
+    "PostgreSQL",
+    "Docker",
+  ],
 };

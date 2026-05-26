@@ -23,8 +23,8 @@ export function Contact() {
           dashboards, or internal tools for real business use?
         </p>
         <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-slate-500">
-          เปิดรับโอกาสงาน Full Stack Developer รวมถึงงาน freelance และ
-          project-based collaboration
+          Currently open to full-time opportunities, freelance work, and
+          project-based collaboration.
         </p>
         <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
           <Link href={profile.links.email}>
