@@ -8,6 +8,13 @@ export const projects = [
       "Teams need a clear way to record, track, and follow up on incidents or operational issues instead of relying on scattered messages or manual tracking.",
     solution:
       "Built an incident board system that organizes issue information, supports visibility, and helps users follow the status of incidents in one place.",
+    built: [
+      "Incident tracking dashboard",
+      "Status workflow management",
+      "Backend API with database-driven structure",
+      "PostgreSQL data model",
+      "Docker development environment",
+    ],
     highlights: [
       "Business workflow-focused application",
       "Backend API with database-driven structure",
@@ -20,6 +27,24 @@ export const projects = [
       "PostgreSQL",
       "Docker",
       "GitHub",
+    ],
+    metrics: [
+      {
+        label: "Frontend",
+        value: "React / Next.js",
+      },
+      {
+        label: "Backend",
+        value: "Django",
+      },
+      {
+        label: "Database",
+        value: "PostgreSQL",
+      },
+      {
+        label: "Deployment",
+        value: "Docker",
+      },
     ],
     screenshot: "/projects/incident-board-dashboard.png",
     githubUrl: "https://github.com/WchrpWwtk/incident_board",

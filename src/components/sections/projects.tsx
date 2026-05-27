@@ -36,16 +36,24 @@ export function Projects() {
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-[1.45fr_0.55fr]">
-            <Card className="overflow-hidden rounded-3xl border-slate-200 bg-slate-950 text-white shadow-sm">
+            <Card className="group overflow-hidden rounded-3xl border-slate-200 bg-slate-950 text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <CardContent className="p-0">
                 <div className="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.22),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(139,92,246,0.18),transparent_32%),linear-gradient(135deg,#020617,#0f172a)] p-4 sm:p-6">
                   <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl">
+                    <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+                      <div className="h-3 w-3 rounded-full bg-red-400" />
+                      <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                      <div className="h-3 w-3 rounded-full bg-green-400" />
+                      <div className="ml-3 hidden rounded-full bg-white/5 px-3 py-1 text-xs text-slate-400 sm:block">
+                        Incident Board Dashboard
+                      </div>
+                    </div>
                     <Image
                       src={project.screenshot}
                       alt={`${project.title} dashboard screenshot`}
                       width={1400}
                       height={900}
-                      className="h-auto w-full object-cover"
+                      className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                       priority={false}
                     />
                   </div>
@@ -69,6 +77,22 @@ export function Projects() {
                       {project.description}
                     </p>
 
+                    <div className="mt-6 grid grid-cols-2 gap-3">
+                      {project.metrics.map((metric) => (
+                        <div
+                          key={metric.label}
+                          className="rounded-2xl border border-white/10 bg-white/4 p-4"
+                        >
+                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                            {metric.label}
+                          </p>
+                          <p className="mt-2 text-sm font-semibold text-white">
+                            {metric.value}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+
                     <div className="mt-6 flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <Badge
@@ -89,7 +113,7 @@ export function Projects() {
                             className="rounded-xl border-white/15 bg-white/5 text-white hover:bg-white/10"
                           >
                             <SiGithub className="mr-2 h-4 w-4" />
-                            View GitHub
+                            View Source Code
                           </Button>
                         </Link>
                       )}
@@ -125,6 +149,20 @@ export function Projects() {
                     </div>
 
                     <div className="rounded-2xl border border-white/10 bg-white/4 p-5">
+                      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
+                        What I Built
+                      </p>
+                      <ul className="mt-3 space-y-2 text-slate-300">
+                        {project.built.map((item) => (
+                          <li key={item} className="flex gap-3">
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-white/4 p-5">
                       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-300">
                         Highlights
                       </p>
@@ -150,12 +188,13 @@ export function Projects() {
                   </p>
 
                   <h3 className="mt-4 text-2xl font-bold tracking-tight">
-                    More case studies are in progress.
+                    More case studies are currently in development.
                   </h3>
 
                   <p className="mt-4 leading-7 text-slate-600">
-                    Future projects will include more internal tools, backend
-                    APIs, dashboards, and practical business workflow systems.
+                    Future projects will include AI-assisted tools, business
+                    workflow systems, backend services, and full-stack
+                    applications.
                   </p>
                 </div>
 
